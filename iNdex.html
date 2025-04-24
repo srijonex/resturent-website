@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scoop - Restaurant</title>
+  <link rel="stylesheet" href="homepage.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- <header class="navbar">
+    <h1 class="logo">Scoop</h1>
+    <ul class="nav-links">
+      <li><a href="#">Order</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#" onclick="openSeatingPopup()">Book Seat</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </header> -->
+
+  <!-- Transparent Header -->
+<header class="transparent-header">
+  <div class="container">
+    <!-- <h1 class="logo">Scoop</h1> -->
+     <div class="logo">
+      <img src="/media/images/logo yellow.png" alt="" id="logoid">
+     </div>
+    <nav>
+      <ul>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#" onclick="openSeatingPopup()">Book Seat</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section with Background Video -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="media/video/resturent vide.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-content">
+    <h1>Welcome to Scoop</h1>
+    <p>Where taste meets style.</p>
+  </div>
+</section>
+
+
+  <!-- Hero Section -->
+  <!-- <section class="hero">
+    <h2>Welcome to Scoop</h2>
+    <p>Delicious dishes served with love!</p>
+  </section> -->
+
+  <!-- video update -->
+  <!-- <div class="hero">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="media/video/resturent vide.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <div class="hero-content">
+      <h1>Welcome to Scoop</h1>
+      <p>Where taste meets style.</p>
+    </div>
+  </div> -->
+  
+
+  <!-- live opening status -->
+  <div id="openStatus"></div>
+
+
+  <!-- Dish Gallery -->
+  <!-- <section class="gallery">
+    <img src="dish1.jpg" alt="Dish 1">
+    <img src="dish2.jpg" alt="Dish 2">
+    <img src="dish3.jpg" alt="Dish 3">
+  </section> -->
+  <section class="gallery-container" data-aos="fade-up">
+    <h2>Our Dishes</h2>
+    <div class="gallery-scroll">
+      <img id="momo" src="/media/images/momo.png" alt="Momo">
+      <img id="chole" src="/media/images/chole .png">
+      <img src="https://source.unsplash.com/300x200/?pizza" alt="Dish 3">
+      <img src="https://source.unsplash.com/300x200/?noodles" alt="Dish 4">
+      <img src="https://source.unsplash.com/300x200/?steak" alt="Dish 5">
+      <img src="https://source.unsplash.com/300x200/?salad" alt="Dish 6">
+      <img src="https://source.unsplash.com/300x200/?sushi" alt="Dish 7">
+      <img src="https://source.unsplash.com/300x200/?dessert" alt="Dish 8">
+    </div>
+  </section>
+  
+
+  <!-- Popup Seat Booking -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Book Your Seat</h3>
+      <form>
+        <label for="seats">Number of Seats:</label>
+        <input type="number" id="seats" name="seats" min="1" max="10" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- update to add menu -->
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-list">
+      <ul>
+        <li>Mehfil ka shaan --------- Rs 570</li>
+        <li>Peri Peri Good Biryani --------- Rs 410</li>
+        <li>ChilliChicken + Biryani --------- Rs 380</li>
+        <li>Wawa Paneer Dosa --------- Rs 230</li>
+        <li>Delhi Wala --------- Rs 295</li>
+      </ul>
+      <ul>
+        <li>Madam Ji Sizzler --------- Rs 330</li>
+        <li>Sir’s Sizzler --------- Rs 360</li>
+        <li>Shanghai Sizzler --------- Rs 325</li>
+        <li>Fish Sizzler --------- Rs 325</li>
+        <li>Chicken Sizzler --------- Rs 510</li>
+      </ul>
+    </div>
+    <!-- <button class="btn center"></button> -->
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-info">
+      <h4>Contact Us</h4>
+      <p>📍 Location: 123 Scoop Street, Food City</p>
+      <p>📞 Phone: +91 12345 67890</p>
+      <br>
+      <p>Timing: Monday to Sunday  <br>12pm to 9 pm</p>
+      <br>
+      <p>All rights reserved @scoop</p>
+    </div>
+    <div class="booking-form">
+      <h4>Book a Table</h4>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="number" placeholder="Guests" min="1" required>
+        <button type="submit">Reserve</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  function openSeatingPopup() {
+  document.getElementById('seatingPopup').style.display = 'flex';
+}
+
+function closeSeatingPopup() {
+  document.getElementById('seatingPopup').style.display = 'none';
+}
+
+function selectTable(el) {
+  document.querySelectorAll('.table').forEach(table => {
+    table.classList.remove('selected');
+  });
+  el.classList.add('selected');
+}
+
+function confirmSeating() {
+  const selected = document.querySelector('.table.selected');
+  if (selected) {
+    alert(`You selected ${selected.textContent}`);
+    closeSeatingPopup();
+  } else {
+    alert('Please select a table first.');
+  }
+}
+
+
+</script>
+<!-- Seating Layout Popup -->
+<div id="seatingPopup" class="popup">
+  <div class="popup-content layout-popup">
+    <span class="close" onclick="closeSeatingPopup()">&times;</span>
+    <h3>Select Your Seating</h3>
+    <div class="layout-grid">
+      <div class="table" onclick="selectTable(this)">Table 1</div>
+      <div class="table" onclick="selectTable(this)">Table 2</div>
+      <div class="table" onclick="selectTable(this)">Table 3</div>
+      <div class="table" onclick="selectTable(this)">Table 4</div>
+      <div class="table" onclick="selectTable(this)">Table 5</div>
+    </div>
+    <button class="confirm-btn" onclick="confirmSeating()">Confirm Table</button>
+  </div>
+</div>
+
+
+</body>
+</html>
